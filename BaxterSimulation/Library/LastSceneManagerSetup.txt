@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/OmasanWorkingScene.unity
+=======
+- path: Assets/Scenes/hide.unity
+>>>>>>> hide2
   isLoaded: 1
   isActive: 1
   isSubScene: 0
