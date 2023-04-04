@@ -33,8 +33,7 @@ public class AgentSpawner : MonoBehaviour
         {
             x += 1.1f;
             nextPosition = new Vector3(x, y, z);
-            Instantiate(Agent, nextPosition, transform.rotation); 
+            Instantiate(Agent, nextPosition, Quaternion.identity); 
         }
     }
-
 }

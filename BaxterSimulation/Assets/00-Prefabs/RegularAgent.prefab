@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  secondEntranceGoal: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
+  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
 --- !u!195 &7060160717903920224
 NavMeshAgent:
   m_ObjectHideFlags: 0

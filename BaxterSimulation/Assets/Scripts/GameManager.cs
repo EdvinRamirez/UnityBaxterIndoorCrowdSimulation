@@ -7,36 +7,50 @@ public class GameManager : MonoBehaviour
 {
     private GameManager _instance;
 
+    public static int MaxAgents = 8000;
+    public static int totalAgents = 0;
+
+    public enum State
+    {
+        Normal,
+        Emergncy
+    }
+
+    public State state;
+
     private void Awake()
     {
         if (_instance == null)
         {
             _instance = this;
             DontDestroyOnLoad(this);
-            Debug.Log("Instance of NetworkManager Created");
+            Debug.Log("Instance of GameManager Created");
         }
         else if (_instance != this)
         {
             Destroy(gameObject);
         }
     }
-
-    public static int MaxAgents = 8000;
-    public static int totalAgents = 0;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        totalAgents = 0;
+        state = State.Normal;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void LateUpdate()
     {
         if (totalAgents <= 0)
         {
+            Debug.Log("Quiting the apllication");
+            UnityEditor.EditorApplication.isPlaying = false;
             Application.Quit();
+        }
+        else
+        {
+            Debug.Log(totalAgents);
         }
     }
 }
