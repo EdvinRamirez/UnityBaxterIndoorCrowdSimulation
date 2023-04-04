@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerManager : MonoBehaviour
+{
+    #region Singleton 
+
+    public static PlayerManager _Instance;
+    // Start is called before the first frame update
+    void Awake()
+    {
+        _Instance = this;
+    }
+
+    #endregion
+
+    public GameObject player;
+}
