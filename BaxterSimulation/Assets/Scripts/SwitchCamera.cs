@@ -9,9 +9,12 @@ public class SwitchCamera : MonoBehaviour
 
     private FreeCameraControl cameracontroller;
 
+    private UIControl uicontrol;
+
     // Start is called before the first frame update
     void Start()
     {
+        uicontrol = FindObjectOfType<Canvas>().GetComponent<UIControl>();
         cameracontroller = FreeCamera.GetComponentInChildren<FreeCameraControl>();
         OverviewCamera.enabled = true;
         FreeCamera.enabled = false;
@@ -26,12 +29,14 @@ public class SwitchCamera : MonoBehaviour
             OverviewCamera.enabled = false;
             FreeCamera.enabled = true;
             cameracontroller.enabled = true;
+            uicontrol.ChangeCameraText("Free Camera");
         }
         else if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             OverviewCamera.enabled = true;
             FreeCamera.enabled = false; 
             cameracontroller.enabled = false;
+            uicontrol.ChangeCameraText("Overview Camera");
         }
     }
 }

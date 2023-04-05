@@ -27,7 +27,6 @@ public class AgentSpawner : MonoBehaviour
 
     private void SpawnAgents()
     {
-        Debug.Log("Position is x = " + x + " y = " + y + " z = "+ z);
         Vector3 nextPosition;
         for (int i = 0; i < Max; i++)
         {
