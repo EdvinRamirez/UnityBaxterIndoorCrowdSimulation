@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public static int MaxAgents = 8000;
     public static int totalAgents = 0;
 
+    private UIControl uicontrol;
     public enum State
     {
         Normal,
@@ -17,7 +18,7 @@ public class GameManager : MonoBehaviour
     }
 
     public State state;
-
+    
     private void Awake()
     {
         if (_instance == null)
@@ -37,6 +38,9 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         state = State.Normal;
+
+        uicontrol = FindObjectOfType<Canvas>().GetComponent<UIControl>();
+        Invoke(nameof(ChangeState), 20f);
     }
 
     // Update is called once per frame
@@ -48,9 +52,11 @@ public class GameManager : MonoBehaviour
             UnityEditor.EditorApplication.isPlaying = false;
             Application.Quit();
         }
-        else
-        {
-            Debug.Log(totalAgents);
-        }
+    }
+
+    public void ChangeState()
+    {
+        state = State.Emergncy;
+        uicontrol.ChangeStateText(State.Emergncy.ToString());
     }
 }

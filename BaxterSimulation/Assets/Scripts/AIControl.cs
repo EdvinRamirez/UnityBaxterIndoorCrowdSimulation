@@ -14,15 +14,14 @@ public class AIControl : MonoBehaviour {
     NavMeshAgent agent;
     Transform target;
 
-    //private GameManager gameManager;
+    private GameManager gameManager;
     private NavMeshPath path;
 
-    private bool exit;
     private bool isLeaving;
 
     void Start() {
 
-        //gameManager = FindObjectOfType<GameManager>();
+        gameManager = FindObjectOfType<GameManager>();
 
         GameManager.totalAgents++;
 
@@ -40,7 +39,7 @@ public class AIControl : MonoBehaviour {
         
         
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(target.position);
+        //Invoke("setAgentDestination", 10f);
 
         /*
         exit = false;
@@ -59,22 +58,11 @@ public class AIControl : MonoBehaviour {
 
     void Update() {
 
-        /*
-        switch (gameManager.state)
-        {
-            case GameManager.State.Normal:
-                break;
-            case GameManager.State.Emergncy:
-                exit = true;
-                break;
-        }
-
-        if (!isLeaving && exit)
+        if (!isLeaving && gameManager.state == GameManager.State.Emergncy)
         {
             agent.SetDestination(target.position);
             isLeaving = true;
         }
-        */
 
 
         float distance = Vector3.Distance(target.position, transform.position);
@@ -84,5 +72,10 @@ public class AIControl : MonoBehaviour {
             GameManager.totalAgents--;
             Destroy(this.gameObject);
         }
+    }
+
+    void setAgentDestination()
+    {
+        agent.SetDestination(target.position);
     }
 }
