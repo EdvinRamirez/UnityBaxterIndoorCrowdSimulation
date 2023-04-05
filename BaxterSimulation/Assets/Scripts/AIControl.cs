@@ -4,12 +4,15 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class AIControl : MonoBehaviour {
-
+    /*
     public GameObject mainEntranceGoal;
-    public GameObject NorthLobbyExntrance;
+    public GameObject northLobbyExntrance;
 
-    public GameObject EmergencyExitSouth;
-    public GameObject EmergencyExitNorth;
+    public GameObject emergencyExitSouth;
+    public GameObject emergencyExitNorth;
+    */
+
+    ExitsManager exits;
 
     NavMeshAgent agent;
     Transform target;
@@ -20,22 +23,39 @@ public class AIControl : MonoBehaviour {
     private bool isLeaving;
 
     void Start() {
-
-        gameManager = FindObjectOfType<GameManager>();
-
         GameManager.totalAgents++;
+        gameManager = FindObjectOfType<GameManager>();
+        exits = ExitsManager._instance;
 
-        float maindistance = Vector3.Distance(mainEntranceGoal.transform.position, transform.position);
-        float seconddistance = Vector3.Distance(NorthLobbyExntrance.transform.position, transform.position);
+        float maindistance              = Vector3.Distance(exits.mainEntranceGoal.position,   transform.position);
+        float northLobbydistance        = Vector3.Distance(exits.northLobbyEntrance.position, transform.position);
+        float emergencysouthdistance    = Vector3.Distance(exits.emergencyExitNorth.position, transform.position);
+        float emergencyNorthdistance    = Vector3.Distance(exits.emergencyExitNorth.position, transform.position);
 
-        if (maindistance < seconddistance)
+        float[] targetlist = { maindistance, northLobbydistance, emergencysouthdistance, emergencyNorthdistance };
+
+        float targestPosition = Mathf.Min(targetlist);
+
+        for (int i = 0; i < targetlist.Length; i++)
         {
-            target = mainEntranceGoal.transform;
+            if (targestPosition == targetlist[0])
+            {
+                target = exits.mainEntranceGoal;
+            }
+            else if (targestPosition == targetlist[1])
+            {
+                target = exits.northLobbyEntrance;
+            }
+            else if (targestPosition == targetlist[2])
+            {
+                target = exits.emergencyExitSouth;
+            }
+            else if (targestPosition == targetlist[3])
+            {
+                target = exits.emergencyExitNorth;
+            }
         }
-        else
-        {
-            target = NorthLobbyExntrance.transform;
-        }
+
         
         
         agent = GetComponent<NavMeshAgent>();
@@ -64,9 +84,7 @@ public class AIControl : MonoBehaviour {
             isLeaving = true;
         }
 
-
         float distance = Vector3.Distance(target.position, transform.position);
-
         if (distance <= agent.stoppingDistance + 1)
         {
             GameManager.totalAgents--;

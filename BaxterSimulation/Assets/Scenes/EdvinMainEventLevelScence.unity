@@ -1332,10 +1332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &43930573
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1411,7 +1407,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &46998885
 GameObject:
@@ -3762,10 +3758,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &131437681
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3841,7 +3833,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &139048506
 GameObject:
@@ -9110,7 +9102,7 @@ Transform:
   - {fileID: 665422654}
   - {fileID: 1325255434}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &325989362
 GameObject:
@@ -9430,7 +9422,7 @@ PrefabInstance:
       objectReference: {fileID: 23800000, guid: 85639b4afd02dbe4a8680835b6f4dfdd, type: 2}
     - target: {fileID: 1836931150147982684, guid: 821fbe065eff8e848a326975c53959ee, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 1836931150147982684, guid: 821fbe065eff8e848a326975c53959ee, type: 3}
       propertyPath: m_LocalScale.x
@@ -11974,7 +11966,7 @@ Transform:
   m_Children:
   - {fileID: 1315264165}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &423000801
 MonoBehaviour:
@@ -12455,7 +12447,7 @@ Transform:
   - {fileID: 248941126}
   - {fileID: 201883399}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &438801640
 GameObject:
@@ -12621,10 +12613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &452841134
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12700,7 +12688,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &453255314
 GameObject:
@@ -13721,10 +13709,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &489018215
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -13800,7 +13784,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &489492002
 GameObject:
@@ -17764,7 +17748,7 @@ Transform:
   - {fileID: 541891435}
   - {fileID: 631015978}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619866630
 GameObject:
@@ -18405,10 +18389,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &658719963
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -18484,7 +18464,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &660118321
 GameObject:
@@ -20925,7 +20905,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &751375057
 GameObject:
@@ -21281,10 +21261,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &762324777
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -21360,7 +21336,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &769583694
 GameObject:
@@ -23141,10 +23117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &822556313
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -23220,7 +23192,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &822582945
 GameObject:
@@ -24146,10 +24118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &844505744
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -24225,7 +24193,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &845566153
 GameObject:
@@ -27510,10 +27478,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &985192047
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -27589,7 +27553,54 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &989586774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 989586776}
+  - component: {fileID: 989586775}
+  m_Layer: 0
+  m_Name: ExitsManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &989586775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989586774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39f575adbd6b8d4daf6fe89dc73ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainEntranceGoal: {fileID: 2105253986507639831, guid: f686087e44fa71347b2d564a065464ae, type: 3}
+  northLobbyEntrance: {fileID: 5884182267786939572, guid: 23d515f469525064aa284790f00e672b, type: 3}
+  emergencyExitSouth: {fileID: 6004234292622786197, guid: 71fd46170c57537438e3eb467b0ae8db, type: 3}
+  emergencyExitNorth: {fileID: 6019781058219731039, guid: f2266c8ec22ef0f4ab25b9d508dfd081, type: 3}
+--- !u!4 &989586776
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989586774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &992603954
 GameObject:
@@ -29202,7 +29213,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1048013672
 GameObject:
@@ -30235,7 +30246,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1078273206
 GameObject:
@@ -30591,10 +30602,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1093378967
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -30670,7 +30677,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 34
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1093394497
 GameObject:
@@ -35078,10 +35085,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1258779454
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -35157,7 +35160,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1265909576
 GameObject:
@@ -36463,10 +36466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1310718158
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -36542,7 +36541,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1312973253
 GameObject:
@@ -37593,10 +37592,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1337401604
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -37672,7 +37667,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1338744494
 GameObject:
@@ -40075,7 +40070,7 @@ Transform:
   - {fileID: 1478509609}
   - {fileID: 65666310}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1419165465
 GameObject:
@@ -40305,7 +40300,7 @@ Transform:
   - {fileID: 1702604902}
   - {fileID: 1104671642}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1435270704
 GameObject:
@@ -40376,10 +40371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1435270708
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -40455,7 +40446,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1446262507
 GameObject:
@@ -42711,10 +42702,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1534790417
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -42790,7 +42777,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1536926900
 GameObject:
@@ -45616,10 +45603,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1630593025
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -45695,7 +45678,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1637363592
 GameObject:
@@ -51471,10 +51454,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1861849447
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -51550,7 +51529,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1863739579
 GameObject:
@@ -51621,10 +51600,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1863739583
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -51700,7 +51675,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1867480427
 GameObject:
@@ -51833,7 +51808,7 @@ Transform:
   - {fileID: 1956876891}
   - {fileID: 898468791}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1877254551
 GameObject:
@@ -52379,10 +52354,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1884864417
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -52458,7 +52429,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1884943921
 GameObject:
@@ -54571,10 +54542,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1966884515
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -54650,7 +54617,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1969337547
 GameObject:
@@ -54816,10 +54783,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1969593101
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -54895,7 +54858,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1971124212
 GameObject:
@@ -56011,10 +55974,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &1989608100
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -56090,7 +56049,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 29
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1991567240
 GameObject:
@@ -57396,10 +57355,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &2030066741
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -57475,7 +57430,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 36
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2036959228
 GameObject:
@@ -57731,7 +57686,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 38
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2044849199
 GameObject:
@@ -57802,10 +57757,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
-  EmergencyExitSouth: {fileID: 0}
-  EmergencyExitNorth: {fileID: 0}
 --- !u!136 &2044849203
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -57881,7 +57832,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 37
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2048603172
 GameObject:
@@ -61613,7 +61564,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7756304640588561308, guid: 7cc4bc6ef9887f74cb76227eb1d887f7, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7756304640588561308, guid: 7cc4bc6ef9887f74cb76227eb1d887f7, type: 3}
       propertyPath: m_LocalPosition.x
