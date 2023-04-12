@@ -13,3 +13,8 @@ alternatively what areas of Baxter already work well in these scenarios.
 Implementation Strategy: Currently the project is set to build using the Unity game engine 
 using C# as the main programming language. We also plan on using Blender for the majority of 
 assets while building a copy of Baxter Arena. 
+
+*CODE MILESTONE 3 RELASE NOTES*
+- Game Manager script implemented
+- Updated AI Control Script to improve Agent functionality. 
+- 1rst & 2nd Floor Agent testing started 
