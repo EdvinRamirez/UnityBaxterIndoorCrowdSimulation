@@ -4,23 +4,19 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class AIControl : MonoBehaviour {
-    /*
-    public GameObject mainEntranceGoal;
-    public GameObject northLobbyExntrance;
 
-    public GameObject emergencyExitSouth;
-    public GameObject emergencyExitNorth;
-    */
-
-    ExitsManager exits;
-
-    NavMeshAgent agent;
-    Transform target;
-
+    private ExitsManager exits;
     private GameManager gameManager;
+
+    private NavMeshAgent agent;
+    private Transform target;
     private NavMeshPath path;
 
     private bool isLeaving;
+
+    private float speed;
+
+
 
     void Start() {
         GameManager.totalAgents++;
@@ -56,23 +52,9 @@ public class AIControl : MonoBehaviour {
             }
         }
 
-        
-        
+        speed = Random.Range(2.0f, 4.5f);
         agent = GetComponent<NavMeshAgent>();
-        //Invoke("setAgentDestination", 10f);
-
-        /*
-        exit = false;
-        isLeaving = false;
-        //agent.SetDestination(target.position);
-        //path = new NavMeshPath();
-        //agent.CalculatePath(target.position, path);
-        
-        if(path.status == NavMeshPathStatus.PathComplete)
-        {
-            agent.SetDestination(target.position);
-        }
-        */
+        agent.speed = speed;
     }
 
 
@@ -90,10 +72,5 @@ public class AIControl : MonoBehaviour {
             GameManager.totalAgents--;
             Destroy(this.gameObject);
         }
-    }
-
-    void setAgentDestination()
-    {
-        agent.SetDestination(target.position);
     }
 }

@@ -6,8 +6,14 @@ using UnityEngine;
 public class AgentSpawner : MonoBehaviour
 {
     private new Transform transform;
-    private static int Max;
     public GameObject Agent;
+
+    public int minAgents;
+    public int maxAgents;
+
+    public float moveX;
+    public float moveY;
+    public float moveZ;
 
     private float x;
     private float y;
@@ -17,7 +23,6 @@ public class AgentSpawner : MonoBehaviour
     void Start()
     {
         transform = GetComponent<Transform>();
-        Max = 15;
 
         x = transform.position.x;
         y = transform.position.y;
@@ -28,9 +33,11 @@ public class AgentSpawner : MonoBehaviour
     private void SpawnAgents()
     {
         Vector3 nextPosition;
-        for (int i = 0; i < Max; i++)
+        for (int i = 0; i < maxAgents; i++)
         {
-            x += 1.1f;
+            x += moveX;
+            y += moveY;
+            z += moveZ;
             nextPosition = new Vector3(x, y, z);
             Instantiate(Agent, nextPosition, Quaternion.identity); 
         }
