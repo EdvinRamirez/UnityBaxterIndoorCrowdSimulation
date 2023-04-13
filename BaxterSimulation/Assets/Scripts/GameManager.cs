@@ -14,7 +14,8 @@ public class GameManager : MonoBehaviour
     public enum State
     {
         Normal,
-        Emergncy
+        Emergncy,
+        EvaComplete
     }
 
     public State state;
@@ -48,8 +49,10 @@ public class GameManager : MonoBehaviour
     {
         if (totalAgents <= 0)
         {
+            Invoke(nameof(ChangeStateComplete), 10f);
+
             Debug.Log("Quiting the apllication");
-            UnityEditor.EditorApplication.isPlaying = false;
+            //UnityEditor.EditorApplication.isPlaying = false;
             Application.Quit();
         }
     }
@@ -58,5 +61,12 @@ public class GameManager : MonoBehaviour
     {
         state = State.Emergncy;
         uicontrol.ChangeStateText(State.Emergncy.ToString());
+    }
+
+    public void ChangeStateComplete()
+    {
+        state = State.EvaComplete;
+        uicontrol.ChangeStateText(State.EvaComplete.ToString());
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
