@@ -9477,7 +9477,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 379519178770709806, guid: 821fbe065eff8e848a326975c53959ee, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1836931150147982682, guid: 821fbe065eff8e848a326975c53959ee, type: 3}
       propertyPath: m_Name
@@ -9498,7 +9498,7 @@ PrefabInstance:
     - target: {fileID: 1836931150147982683, guid: 821fbe065eff8e848a326975c53959ee, type: 3}
       propertyPath: m_NavMeshData
       value: 
-      objectReference: {fileID: 23800000, guid: 85639b4afd02dbe4a8680835b6f4dfdd, type: 2}
+      objectReference: {fileID: 23800000, guid: d2c33d8ba2ed5c74db6c7215dca66652, type: 2}
     - target: {fileID: 1836931150147982684, guid: 821fbe065eff8e848a326975c53959ee, type: 3}
       propertyPath: m_RootOrder
       value: 13
