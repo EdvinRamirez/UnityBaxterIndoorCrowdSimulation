@@ -10,6 +10,7 @@ public class SwitchCamera : MonoBehaviour
     private FreeCameraControl cameracontroller;
 
     private UIControl uicontrol;
+    private AudioListener audio;
 
     // Start is called before the first frame update
     void Start()
