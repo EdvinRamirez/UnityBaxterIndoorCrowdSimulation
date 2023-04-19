@@ -12,7 +12,7 @@ public class AgentSpawner : MonoBehaviour
     public int maxAgents;
 
     public float moveX;
-    public float moveY;
+    private float moveY;
     public float moveZ;
 
     private float x;

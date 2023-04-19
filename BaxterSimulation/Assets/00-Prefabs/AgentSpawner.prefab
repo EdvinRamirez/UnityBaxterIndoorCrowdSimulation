@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7756304640588561305}
   - component: {fileID: 7756304640588561306}
   m_Layer: 0
-  m_Name: AgentSpawner (1)
+  m_Name: AgentSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -111,8 +111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 2105253986507639819, guid: f686087e44fa71347b2d564a065464ae, type: 3}
-  NorthLobbyExntrance: {fileID: 5884182267786939560, guid: 23d515f469525064aa284790f00e672b, type: 3}
 --- !u!195 &7756304640588561305
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -148,3 +146,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Agent: {fileID: 7060160717903920238, guid: 8e90e0daaf2b766458b12ea1b56b25e9, type: 3}
+  minAgents: 0
+  maxAgents: 0
+  moveX: 0
+  moveZ: 0
