@@ -18,3 +18,8 @@ assets while building a copy of Baxter Arena.
 - Game Manager script implemented
 - Updated AI Control Script to improve Agent functionality. 
 - 1rst & 2nd Floor Agent testing started 
+
+*CODE MILESTONE 4 RELASE NOTES*
+- First and Second Floor navmesh agents added 
+- Main menu added 
+- Next steps are to finish 3rd and 4th floor walls, optimize nav mesh agents, finish main menu functionality. 
