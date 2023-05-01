@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         state = State.Normal;
 
         uicontrol = FindObjectOfType<Canvas>().GetComponent<UIControl>();
-        Invoke(nameof(ChangeState), 20f);
+        Invoke(nameof(ChangeState), 4f);
     }
 
     // Update is called once per frame
