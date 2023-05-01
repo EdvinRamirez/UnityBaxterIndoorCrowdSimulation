@@ -4,16 +4,16 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
 
-public class AIControl : MonoBehaviour
+public class AIControlV2 : MonoBehaviour
 {
 
-    private ExitsManager exitsManager;
+    private ExitsManager exits;
     private GameManager gameManager;
     private SubGoal subGoals;
 
     private NavMeshAgent agent;
     private Transform target;
-    private NavMeshPath pathToTarget;
+    private NavMeshPath path;
 
     private bool isLeaving;
 
@@ -24,34 +24,48 @@ public class AIControl : MonoBehaviour
     private Transform subGoalPosition;
 
     private bool isLeavingSeats;
-
-
+    /*
 
     void Start()
     {
-        pathToTarget = new NavMeshPath();
-
         isLeaving = false;
         isLeavingSeats = false;
 
         GameManager.totalAgents++;
         gameManager = FindObjectOfType<GameManager>();
-        exitsManager = ExitsManager._instance;
+        exits = ExitsManager._instance;
         subGoals = SubGoal._instance;
 
-        float closestDistance = 9999999999f;
-        for (int i = 0; i < exitsManager.mainExits.Length; i++)
-        {
-            float distance = Vector3.Distance(exitsManager.mainExits[i].position, transform.position);
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                target = exitsManager.mainExits[i];
-            }
+        float maindistance = Vector3.Distance(exits.mainEntranceGoal.position, transform.position);
+        float northLobbydistance = Vector3.Distance(exits.northLobbyEntrance.position, transform.position);
+        float emergencysouthdistance = Vector3.Distance(exits.emergencyExitNorth.position, transform.position);
+        float emergencyNorthdistance = Vector3.Distance(exits.emergencyExitNorth.position, transform.position);
 
+        float[] targetlist = { maindistance, northLobbydistance, emergencysouthdistance, emergencyNorthdistance };
+
+        float targestPosition = Mathf.Min(targetlist);
+
+        for (int i = 0; i < targetlist.Length; i++)
+        {
+            if (targestPosition == targetlist[0])
+            {
+                target = exits.mainEntranceGoal;
+            }
+            else if (targestPosition == targetlist[1])
+            {
+                target = exits.northLobbyEntrance;
+            }
+            else if (targestPosition == targetlist[2])
+            {
+                target = exits.emergencyExitSouth;
+            }
+            else if (targestPosition == targetlist[3])
+            {
+                target = exits.emergencyExitNorth;
+            }
         }
 
-        speed = Random.Range(2.0f, 3.0f);
+        speed = Random.Range(3.0f, 4.5f);
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
 
@@ -69,18 +83,19 @@ public class AIControl : MonoBehaviour
             }
         }
 
-        StartCoroutine(MyCoroutine());
+        //StartCoroutine(MyCoroutine());
     }
 
-    /**
+    
     void Update()
     {
+
+
         if (!isLeaving && gameManager.state == GameManager.State.Emergncy)
         {
             agent.SetDestination(subGoalPosition.position);
             isLeaving = true;
             isLeavingSeats = true;
-            NavMesh.CalculatePath(subGoalPosition.position, target.position, NavMesh.AllAreas, pathToTarget);
         }
         else if (isLeaving)
         {
@@ -91,7 +106,7 @@ public class AIControl : MonoBehaviour
                 {
                     isLeavingSeats = false;
 
-                    agent.SetPath(pathToTarget);
+                    agent.SetDestination(target.position);
                 }
             }
             else
@@ -119,9 +134,9 @@ public class AIControl : MonoBehaviour
         GetComponent<Renderer>().material.color = color;
 
 
-    }*/
+    }
 
-    
+    /**
     IEnumerator MyCoroutine()
     {
         while (true)
@@ -131,7 +146,6 @@ public class AIControl : MonoBehaviour
                 agent.SetDestination(subGoalPosition.position);
                 isLeaving = true;
                 isLeavingSeats = true;
-                NavMesh.CalculatePath(subGoalPosition.position, target.position, NavMesh.AllAreas, pathToTarget);
             }
             else if (isLeaving)
             {
@@ -142,7 +156,7 @@ public class AIControl : MonoBehaviour
                     {
                         isLeavingSeats = false;
 
-                        agent.SetPath(pathToTarget);
+                        agent.SetDestination(target.position);
                     }
                 }
                 else
@@ -154,26 +168,22 @@ public class AIControl : MonoBehaviour
                         break;
                     }
                 }
-            }
 
-            Color color;
+                Color color;
 
-            if (agent.pathPending)
-            {
-                color = Color.gray;
-            }
-            else
-            {
-                color = Color.green;
-            }
+                if (agent.pathPending)
+                {
+                    color = Color.gray;
+                }
+                else
+                {
+                    color = Color.green;
+                }
 
-            GetComponent<Renderer>().material.color = color;
+                GetComponent<Renderer>().material.color = color;
+            }
 
             yield return null;
         }
-
-        yield return new WaitForSeconds(5f);
-
-        Destroy(this.gameObject);
-    }
+    }*/
 }
