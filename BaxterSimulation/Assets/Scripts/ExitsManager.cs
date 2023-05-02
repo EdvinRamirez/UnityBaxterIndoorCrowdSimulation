@@ -18,8 +18,7 @@ public class ExitsManager : MonoBehaviour
     public Transform[] firstPoints;
     public Transform[] SecondPoints;
 
-    public List<Tuple<Transform, float>> list;
-
+    public int targetCount;
 
     // Start is called before the first frame update
 

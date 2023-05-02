@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     public static int MaxAgents = 8000;
     public static int totalAgents = 0;
 
+    public float AgentSpeedmin;
+    public float AgentSpeedmax;
+
     private UIControl uicontrol;
     public enum State
     {

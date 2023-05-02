@@ -7,145 +7,71 @@ using System.Linq;
 public class AIControlV2 : MonoBehaviour
 {
 
-    private ExitsManager exits;
+    private ExitsManager exitsManager;
     private GameManager gameManager;
-    private SubGoal subGoals;
 
     private NavMeshAgent agent;
-    private Transform target;
-    private NavMeshPath path;
+    private Transform tempTarget;
+    private NavMeshPath tempPath;
+
+    private List<NavMeshPath> pathsList;
 
     private bool isLeaving;
 
     private float speed;
-
-    private int totalSubGoal;
-    private float subGoalDistances;
-    private Transform subGoalPosition;
-
     private bool isLeavingSeats;
-    /*
+    
 
     void Start()
     {
         isLeaving = false;
         isLeavingSeats = false;
 
+        pathsList = new List<NavMeshPath>();
+        tempPath = new NavMeshPath();
+
         GameManager.totalAgents++;
         gameManager = FindObjectOfType<GameManager>();
-        exits = ExitsManager._instance;
-        subGoals = SubGoal._instance;
+        exitsManager = ExitsManager._instance;
 
-        float maindistance = Vector3.Distance(exits.mainEntranceGoal.position, transform.position);
-        float northLobbydistance = Vector3.Distance(exits.northLobbyEntrance.position, transform.position);
-        float emergencysouthdistance = Vector3.Distance(exits.emergencyExitNorth.position, transform.position);
-        float emergencyNorthdistance = Vector3.Distance(exits.emergencyExitNorth.position, transform.position);
+        float pathdistance = 99999999;
 
-        float[] targetlist = { maindistance, northLobbydistance, emergencysouthdistance, emergencyNorthdistance };
-
-        float targestPosition = Mathf.Min(targetlist);
-
-        for (int i = 0; i < targetlist.Length; i++)
-        {
-            if (targestPosition == targetlist[0])
-            {
-                target = exits.mainEntranceGoal;
-            }
-            else if (targestPosition == targetlist[1])
-            {
-                target = exits.northLobbyEntrance;
-            }
-            else if (targestPosition == targetlist[2])
-            {
-                target = exits.emergencyExitSouth;
-            }
-            else if (targestPosition == targetlist[3])
-            {
-                target = exits.emergencyExitNorth;
-            }
-        }
+        SetPath(exitsManager.firstPoints, transform);
+        SetPath(exitsManager.mainExits, tempTarget);
+        
 
         speed = Random.Range(3.0f, 4.5f);
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
 
 
-        totalSubGoal = subGoals.subGoal.Length;
-        subGoalDistances = float.MaxValue;
-
-        for (int i = 0; i < totalSubGoal; i++)
-        {
-            float distance = Vector3.Distance(subGoals.subGoal[i].position, transform.position);
-            if (distance < subGoalDistances)
-            {
-                subGoalDistances = distance;
-                subGoalPosition = subGoals.subGoal[i];
-            }
-        }
-
-        //StartCoroutine(MyCoroutine());
+        StartCoroutine(MyCoroutine());
     }
 
-    
-    void Update()
-    {
-
-
-        if (!isLeaving && gameManager.state == GameManager.State.Emergncy)
-        {
-            agent.SetDestination(subGoalPosition.position);
-            isLeaving = true;
-            isLeavingSeats = true;
-        }
-        else if (isLeaving)
-        {
-            if (isLeavingSeats)
-            {
-                float distance = Vector3.Distance(subGoalPosition.position, transform.position);
-                if (distance <= agent.stoppingDistance + 1)
-                {
-                    isLeavingSeats = false;
-
-                    agent.SetDestination(target.position);
-                }
-            }
-            else
-            {
-                float distance = Vector3.Distance(target.position, transform.position);
-                if (distance <= agent.stoppingDistance + 1)
-                {
-                    GameManager.totalAgents--;
-                    Destroy(this.gameObject);
-                }
-            }
-        }
-
-        Color color;
-
-        if (agent.pathPending)
-        {
-            color = Color.gray;
-        }
-        else
-        {
-            color = Color.green;
-        }
-
-        GetComponent<Renderer>().material.color = color;
-
-
-    }
-
-    /**
     IEnumerator MyCoroutine()
     {
         while (true)
         {
             if (!isLeaving && gameManager.state == GameManager.State.Emergncy)
             {
-                agent.SetDestination(subGoalPosition.position);
+                agent.SetPath(pathsList.ElementAt<NavMeshPath>(0));
+                pathsList.RemoveAt(0);
+                isLeaving = true;
+            }
+            else if (isLeaving)
+            {
+               
+            }
+
+
+            /*
+            if (!isLeaving && gameManager.state == GameManager.State.Emergncy)
+            {
+                //agent.SetDestination(subGoalPosition.position);
+                agent.SetPath(pathtoSubTarget);
                 isLeaving = true;
                 isLeavingSeats = true;
+                NavMesh.CalculatePath(subGoalPosition.position, target.position, NavMesh.AllAreas, pathToTarget);
             }
             else if (isLeaving)
             {
@@ -156,7 +82,7 @@ public class AIControlV2 : MonoBehaviour
                     {
                         isLeavingSeats = false;
 
-                        agent.SetDestination(target.position);
+                        agent.SetPath(pathToTarget);
                     }
                 }
                 else
@@ -168,22 +94,38 @@ public class AIControlV2 : MonoBehaviour
                         break;
                     }
                 }
+            }*/
 
-                Color color;
-
-                if (agent.pathPending)
-                {
-                    color = Color.gray;
-                }
-                else
-                {
-                    color = Color.green;
-                }
-
-                GetComponent<Renderer>().material.color = color;
-            }
 
             yield return null;
         }
-    }*/
+
+        yield return new WaitForSeconds(3f);
+
+        Destroy(this.gameObject);
+    }
+
+
+    private void SetPath(Transform[] points, Transform transform)
+    {
+        if (points.Length == 0)
+        {
+            float closestDistance = 99999999;
+            for (int i = 0; i < points.Length; i++)
+            {
+                float distance = Vector3.Distance(points[i].position, transform.position);
+
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    tempTarget = points[i];
+                }
+            }
+
+            NavMesh.CalculatePath(transform.position, tempTarget.position, NavMesh.AllAreas, tempPath);
+
+            pathsList.Add(tempPath);
+        }
+    }
+
 }
