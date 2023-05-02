@@ -4,81 +4,67 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
 
-public class AIControl : MonoBehaviour
+public class AIControlV2 : MonoBehaviour
 {
 
     private ExitsManager exitsManager;
     private GameManager gameManager;
-    private SubGoal subGoals;
 
     private NavMeshAgent agent;
-    private Transform target;
-    private NavMeshPath pathtoSubTarget;
-    private NavMeshPath pathToTarget;
+    private Transform tempTarget;
+    private NavMeshPath tempPath;
+
+    private List<NavMeshPath> pathsList;
 
     private bool isLeaving;
 
     private float speed;
-
-    private int totalSubGoal;
-    private float subGoalDistances;
-    private Transform subGoalPosition;
-
     private bool isLeavingSeats;
+    
 
     void Start()
     {
-        pathToTarget = new NavMeshPath();
-        pathtoSubTarget = new NavMeshPath();
-
         isLeaving = false;
         isLeavingSeats = false;
+
+        pathsList = new List<NavMeshPath>();
+        tempPath = new NavMeshPath();
 
         GameManager.totalAgents++;
         gameManager = FindObjectOfType<GameManager>();
         exitsManager = ExitsManager._instance;
-        subGoals = SubGoal._instance;
 
-        float closestDistance = 9999999999f;
-        for (int i = 0; i < exitsManager.mainExits.Length; i++)
-        {
-            float distance = Vector3.Distance(exitsManager.mainExits[i].position, transform.position);
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                target = exitsManager.mainExits[i];
-            }
+        float pathdistance = 99999999;
 
-        }
+        SetPath(exitsManager.firstPoints, transform);
+        SetPath(exitsManager.mainExits, tempTarget);
+        
 
-        speed = Random.Range(gameManager.AgentSpeedmin, gameManager.AgentSpeedmax);
+        speed = Random.Range(3.0f, 4.5f);
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
 
 
-        totalSubGoal = subGoals.subGoal.Length;
-        subGoalDistances = float.MaxValue;
-
-        for (int i = 0; i < totalSubGoal; i++)
-        {
-            float distance = Vector3.Distance(subGoals.subGoal[i].position, transform.position);
-            if (distance < subGoalDistances)
-            {
-                subGoalDistances = distance;
-                subGoalPosition = subGoals.subGoal[i];
-            }
-        }
-
-        NavMesh.CalculatePath(transform.position, subGoalPosition.position, NavMesh.AllAreas, pathtoSubTarget);
-
         StartCoroutine(MyCoroutine());
     }
-
 
     IEnumerator MyCoroutine()
     {
         while (true)
         {
+            if (!isLeaving && gameManager.state == GameManager.State.Emergncy)
+            {
+                agent.SetPath(pathsList.ElementAt<NavMeshPath>(0));
+                pathsList.RemoveAt(0);
+                isLeaving = true;
+            }
+            else if (isLeaving)
+            {
+               
+            }
+
+
+            /*
             if (!isLeaving && gameManager.state == GameManager.State.Emergncy)
             {
                 //agent.SetDestination(subGoalPosition.position);
@@ -108,20 +94,8 @@ public class AIControl : MonoBehaviour
                         break;
                     }
                 }
-            }
+            }*/
 
-            Color color;
-
-            if (agent.pathPending)
-            {
-                color = Color.gray;
-            }
-            else
-            {
-                color = Color.green;
-            }
-
-            GetComponent<Renderer>().material.color = color;
 
             yield return null;
         }
@@ -130,4 +104,28 @@ public class AIControl : MonoBehaviour
 
         Destroy(this.gameObject);
     }
+
+
+    private void SetPath(Transform[] points, Transform transform)
+    {
+        if (points.Length == 0)
+        {
+            float closestDistance = 99999999;
+            for (int i = 0; i < points.Length; i++)
+            {
+                float distance = Vector3.Distance(points[i].position, transform.position);
+
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    tempTarget = points[i];
+                }
+            }
+
+            NavMesh.CalculatePath(transform.position, tempTarget.position, NavMesh.AllAreas, tempPath);
+
+            pathsList.Add(tempPath);
+        }
+    }
+
 }
