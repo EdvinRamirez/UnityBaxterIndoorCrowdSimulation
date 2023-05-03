@@ -18,6 +18,12 @@ public class ExitsManager : MonoBehaviour
     public Transform[] firstPoints;
     public Transform[] SecondPoints;
 
+    public Transform[] path1;
+    public Transform[] path2;
+    public Transform[] path3;
+
+    public Transform[] allPaths;
+
     public int targetCount;
 
     // Start is called before the first frame update
@@ -34,6 +40,9 @@ public class ExitsManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        allPaths = new Transform[3];
+
     }
     /*
     private void Start()

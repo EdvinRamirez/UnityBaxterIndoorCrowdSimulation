@@ -9,67 +9,45 @@ public class AIControl : MonoBehaviour
 
     private ExitsManager exitsManager;
     private GameManager gameManager;
-    private SubGoal subGoals;
 
     private NavMeshAgent agent;
-    private Transform target;
-    private NavMeshPath pathtoSubTarget;
-    private NavMeshPath pathToTarget;
+
+    private NavMeshPath[] allPaths;
+    private Vector3[] allTargets;
+
+    private int counterPath;
 
     private bool isLeaving;
+    private bool isWalking;
+
+    private Transform currenttarget;
 
     private float speed;
 
-    private int totalSubGoal;
-    private float subGoalDistances;
-    private Transform subGoalPosition;
-
-    private bool isLeavingSeats;
 
     void Start()
     {
-        pathToTarget = new NavMeshPath();
-        pathtoSubTarget = new NavMeshPath();
-
         isLeaving = false;
-        isLeavingSeats = false;
+        isWalking = false;
+
+        counterPath = 0;
+
+        allPaths = new NavMeshPath[3];
+        allTargets = new Vector3[3];
 
         GameManager.totalAgents++;
         gameManager = FindObjectOfType<GameManager>();
         exitsManager = ExitsManager._instance;
-        subGoals = SubGoal._instance;
 
-        float closestDistance = 9999999999f;
-        for (int i = 0; i < exitsManager.mainExits.Length; i++)
-        {
-            float distance = Vector3.Distance(exitsManager.mainExits[i].position, transform.position);
-            if (distance < closestDistance)
-            {
-                closestDistance = distance;
-                target = exitsManager.mainExits[i];
-            }
 
-        }
+        SetPath(exitsManager.firstPoints, transform.position);
+        SetPath(exitsManager.SecondPoints, allTargets[0]);
+        SetPath(exitsManager.mainExits, allTargets[1]);
 
-        speed = Random.Range(gameManager.AgentSpeedmin, gameManager.AgentSpeedmax);
+        speed = Random.Range(3.0f, 4.5f);
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
 
-
-        totalSubGoal = subGoals.subGoal.Length;
-        subGoalDistances = float.MaxValue;
-
-        for (int i = 0; i < totalSubGoal; i++)
-        {
-            float distance = Vector3.Distance(subGoals.subGoal[i].position, transform.position);
-            if (distance < subGoalDistances)
-            {
-                subGoalDistances = distance;
-                subGoalPosition = subGoals.subGoal[i];
-            }
-        }
-
-        NavMesh.CalculatePath(transform.position, subGoalPosition.position, NavMesh.AllAreas, pathtoSubTarget);
 
         StartCoroutine(MyCoroutine());
     }
@@ -77,51 +55,32 @@ public class AIControl : MonoBehaviour
 
     IEnumerator MyCoroutine()
     {
+        int counter = 0;
+
         while (true)
         {
             if (!isLeaving && gameManager.state == GameManager.State.Emergncy)
             {
-                //agent.SetDestination(subGoalPosition.position);
-                agent.SetPath(pathtoSubTarget);
+                agent.SetPath(allPaths[0]);
                 isLeaving = true;
-                isLeavingSeats = true;
-                NavMesh.CalculatePath(subGoalPosition.position, target.position, NavMesh.AllAreas, pathToTarget);
+                isWalking = true;
+                counter++;
             }
             else if (isLeaving)
             {
-                if (isLeavingSeats)
-                {
-                    float distance = Vector3.Distance(subGoalPosition.position, transform.position);
-                    if (distance <= agent.stoppingDistance + 1)
-                    {
-                        isLeavingSeats = false;
 
-                        agent.SetPath(pathToTarget);
-                    }
-                }
-                else
+                float distance = Vector3.Distance(transform.position, allTargets[counter - 1]);
+                if (distance <= agent.stoppingDistance + 1)
                 {
-                    float distance = Vector3.Distance(target.position, transform.position);
-                    if (distance <= agent.stoppingDistance + 1)
+                    if (counter >= 3)
                     {
-                        GameManager.totalAgents--;
                         break;
                     }
+                    agent.SetPath(allPaths[counter]);
+                    counter++;
                 }
             }
 
-            Color color;
-
-            if (agent.pathPending)
-            {
-                color = Color.gray;
-            }
-            else
-            {
-                color = Color.green;
-            }
-
-            GetComponent<Renderer>().material.color = color;
 
             yield return null;
         }
@@ -129,5 +88,33 @@ public class AIControl : MonoBehaviour
         yield return new WaitForSeconds(3f);
 
         Destroy(this.gameObject);
+    }
+
+
+    private void SetPath(Transform[] points, Vector3 start)
+    {
+        Debug.Log(points.Length);
+
+        if (points.Length > 0)
+        {
+            float closestDistance = float.MaxValue;
+            for (int i = 0; i < points.Length; i++)
+            {
+                float distance = Vector3.Distance(points[i].position, start);
+
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    currenttarget = points[i];
+                }
+            }
+
+            NavMeshPath path = new NavMeshPath();
+
+            NavMesh.CalculatePath(start, currenttarget.position, NavMesh.AllAreas, path);
+            allPaths[counterPath] = path;
+            allTargets[counterPath] = currenttarget.position;
+            counterPath++;
+        }
     }
 }
