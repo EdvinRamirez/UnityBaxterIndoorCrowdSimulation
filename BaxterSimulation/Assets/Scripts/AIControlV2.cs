@@ -39,6 +39,7 @@ public class AIControlV2 : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
         exitsManager = ExitsManager._instance;
 
+        ChoosePath();
 
         SetPath(exitsManager.firstPoints, transform.position);
         SetPath(exitsManager.SecondPoints, allTargets[0]);
@@ -51,7 +52,6 @@ public class AIControlV2 : MonoBehaviour
 
         StartCoroutine(MyCoroutine());
     }
-
 
     IEnumerator MyCoroutine()
     {
@@ -116,5 +116,10 @@ public class AIControlV2 : MonoBehaviour
             allTargets[counterPath] = currenttarget.position;
             counterPath++;
         }
+    }
+
+    private void ChoosePath()
+    {
+        
     }
 }

@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
         state = State.Normal;
 
         uicontrol = FindObjectOfType<Canvas>().GetComponent<UIControl>();
-        Invoke(nameof(ChangeState), 5f);
+        Invoke(nameof(ChangeState), 10f);
     }
 
     // Update is called once per frame
@@ -68,6 +68,6 @@ public class GameManager : MonoBehaviour
     {
         state = State.EvaComplete;
         uicontrol.ChangeStateText(State.EvaComplete.ToString());
-        //UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
