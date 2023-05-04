@@ -68,6 +68,6 @@ public class GameManager : MonoBehaviour
     {
         state = State.EvaComplete;
         uicontrol.ChangeStateText(State.EvaComplete.ToString());
-        //UnityEditor.EditorApplication.isPlaying = false;
+        UnityEditor.EditorApplication.isPlaying = false;
     }
 }
