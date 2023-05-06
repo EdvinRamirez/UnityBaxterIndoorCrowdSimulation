@@ -28,7 +28,6 @@ public class GameManager : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(this);
             Debug.Log("Instance of GameManager Created");
         }
         else if (_instance != this)

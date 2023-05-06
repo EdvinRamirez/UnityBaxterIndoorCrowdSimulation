@@ -9,6 +9,8 @@ public class ExistManagerV2 : MonoBehaviour
     public Transform[] path;
     public Transform[] path1;
 
+    private GameObject[] pathCollection;
+
     private void Awake()
     {
         if (_instance == null)
@@ -21,6 +23,12 @@ public class ExistManagerV2 : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+    }
+
+    private void Start()
+    {
+        pathCollection = GameObject.FindGameObjectsWithTag("Path");
 
     }
 }

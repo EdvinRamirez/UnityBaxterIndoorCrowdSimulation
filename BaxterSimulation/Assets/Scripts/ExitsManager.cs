@@ -7,23 +7,9 @@ public class ExitsManager : MonoBehaviour
 {
     public static ExitsManager _instance;
 
-    /*
-    public Transform mainEntranceGoal;
-    public Transform northLobbyEntrance;
-    public Transform emergencyExitSouth;
-    public Transform emergencyExitNorth;
-    */
+    private GameObject[] pathCollection;
 
-    public Transform[] mainExits;
-    public Transform[] firstPoints;
-    public Transform[] SecondPoints;
-
-    
-
-    public int targetCount;
-
-    public Transform[] path;
-    public Transform[] path1;
+    private int size;
 
     // Start is called before the first frame update
 
@@ -32,7 +18,6 @@ public class ExitsManager : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(this);
             Debug.Log("Instance of GameManager Created");
         }
         else if (_instance != this)
@@ -40,14 +25,42 @@ public class ExitsManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        pathCollection = GameObject.FindGameObjectsWithTag("Path");
     }
-    /*
-    private void Start()
+    
+    void Start()
     {
-        float priority = 1;
-       for (int i = 0; i < mainExits.Length; i++)
+        
+        size = pathCollection.Length;
+    }
+
+    public GameObject[] getPathCollections()
+    {
+        return pathCollection;
+    }
+
+    public Vector3[] GetAgentPath(Vector3 currentPosition)
+    {
+        Vector3[] AgentPath;
+
+        int indexRetrun = 0;
+        float closestPoint = float.MaxValue;
+
+        for (int i = 0; i < size; i++)
         {
-            list.Add(new Tuple<Transform, float>(mainExits[i], 0.4f));
+            AgentPath path = pathCollection[i].GetComponent<AgentPath>();
+            Vector3 position = path.StartPosition();
+
+            float distance = Vector3.Distance(position, currentPosition);
+
+            if (distance < closestPoint)
+            {
+                closestPoint = distance;
+                indexRetrun = i;
+            }
         }
-    }*/
+        AgentPath = pathCollection[indexRetrun].GetComponent<AgentPath>().getPath();
+
+        return AgentPath;
+    }
 }
