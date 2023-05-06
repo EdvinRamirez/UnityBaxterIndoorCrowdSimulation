@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AgentSpawner : MonoBehaviour
 {
-    private new Transform transform;
+    //private Transform transform;
     public GameObject Agent;
 
     public int minAgents;
@@ -22,7 +22,7 @@ public class AgentSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform = GetComponent<Transform>();
+        //transform = GetComponent<Transform>();
 
         x = transform.position.x;
         y = transform.position.y;

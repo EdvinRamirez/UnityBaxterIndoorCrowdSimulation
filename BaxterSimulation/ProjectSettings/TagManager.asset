@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - AgentSpawner
+  - Path
   layers:
   - Default
   - TransparentFX
