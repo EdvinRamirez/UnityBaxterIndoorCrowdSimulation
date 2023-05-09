@@ -44,7 +44,7 @@ public class AIControl : MonoBehaviour
 
         while (true)
         {
-            if (!isLeaving && gameManager.state == GameManager.State.Emergncy)
+            if (!isLeaving && gameManager.state == GameManager.State.Evacuation)
             {
                 agent.SetPath(allPaths[0]);
                 isLeaving = true;

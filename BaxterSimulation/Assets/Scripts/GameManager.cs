@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
     public enum State
     {
         Normal,
-        Emergncy,
+        Evacuation,
         EvaComplete
     }
 
@@ -59,8 +59,8 @@ public class GameManager : MonoBehaviour
 
     public void ChangeState()
     {
-        state = State.Emergncy;
-        uicontrol.ChangeStateText(State.Emergncy.ToString());
+        state = State.Evacuation;
+        uicontrol.ChangeStateText(State.Evacuation.ToString());
     }
 
     public void ChangeStateComplete()
