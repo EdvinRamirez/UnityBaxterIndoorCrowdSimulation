@@ -33972,7 +33972,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 379519178770709806, guid: 821fbe065eff8e848a326975c53959ee, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1261565693834266404, guid: 821fbe065eff8e848a326975c53959ee, type: 3}
       propertyPath: m_IsActive
@@ -67936,7 +67936,7 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
+  m_HDR: 0
   m_AllowMSAA: 1
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0

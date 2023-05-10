@@ -32,7 +32,7 @@ public class AIControl : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
 
-        Invoke(nameof(CalculatePath), 1f);
+        Invoke(nameof(CalculatePath), 2f);
         //CalculatePath();
 
         StartCoroutine(MyCoroutine());
