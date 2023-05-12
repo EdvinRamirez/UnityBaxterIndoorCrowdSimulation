@@ -10722,7 +10722,7 @@ PrefabInstance:
     - target: {fileID: 1836931150147982683, guid: 821fbe065eff8e848a326975c53959ee, type: 3}
       propertyPath: m_NavMeshData
       value: 
-      objectReference: {fileID: 23800000, guid: d2c33d8ba2ed5c74db6c7215dca66652, type: 2}
+      objectReference: {fileID: 23800000, guid: a8c583ad465c3d942baf1b108099e649, type: 2}
     - target: {fileID: 1836931150147982684, guid: 821fbe065eff8e848a326975c53959ee, type: 3}
       propertyPath: m_RootOrder
       value: 13
@@ -33938,10 +33938,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39f575adbd6b8d4daf6fe89dc73ad3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainEntranceGoal: {fileID: 8619335242874807668}
-  northLobbyEntrance: {fileID: 5707407178732512837}
-  emergencyExitSouth: {fileID: 9150841285028560884}
-  emergencyExitNorth: {fileID: 4574707130663871259}
 --- !u!4 &989586776
 Transform:
   m_ObjectHideFlags: 0
@@ -42479,6 +42475,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725ed5fccb3839f4e8efeb7187825159, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AgentSpeedmin: 0
+  AgentSpeedmax: 0
   state: 0
 --- !u!4 &1244791994
 Transform:
