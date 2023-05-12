@@ -1,4 +1,4 @@
 <map id="FreeCameraControl" name="FreeCameraControl">
-<area shape="rect" id="node1" title=" " alt="" coords="5,79,140,104"/>
-<area shape="rect" id="node2" title=" " alt="" coords="17,5,128,31"/>
+<area shape="rect" id="node1" title="Class for the mouse control of the camera." alt="" coords="5,83,139,111"/>
+<area shape="rect" id="node2" title=" " alt="" coords="17,6,127,34"/>
 </map>

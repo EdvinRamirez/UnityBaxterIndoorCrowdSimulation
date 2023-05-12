@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>UnityBaxterSimulationC#Documentation: GameManager Class Reference</title>
+<title>My Project: GameManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,7 +25,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">UnityBaxterSimulationC#Documentation
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -98,13 +98,16 @@ $(document).ready(function(){initNavTree('class_game_manager.html',''); initResi
   <div class="headertitle"><div class="title">GameManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class to keep track of the simulation and also checks when all agents have left the simulation and updatd the state.  
+ <a href="class_game_manager.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for GameManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_manager__inherit__graph.png" border="0" usemap="#a_game_manager_inherit__map" alt="Inheritance graph"/></div>
 <map name="a_game_manager_inherit__map" id="a_game_manager_inherit__map">
-<area shape="rect" title=" " alt="" coords="7,79,114,104"/>
-<area shape="rect" title=" " alt="" coords="5,5,116,31"/>
+<area shape="rect" title="Class to keep track of the simulation and also checks when all agents have left the simulation and up..." alt="" coords="7,83,113,111"/>
+<area shape="rect" title=" " alt="" coords="5,6,115,34"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -112,25 +115,37 @@ Collaboration diagram for GameManager:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_game_manager__coll__graph.png" border="0" usemap="#a_game_manager_coll__map" alt="Collaboration graph"/></div>
 <map name="a_game_manager_coll__map" id="a_game_manager_coll__map">
-<area shape="rect" title=" " alt="" coords="7,79,114,104"/>
-<area shape="rect" title=" " alt="" coords="5,5,116,31"/>
+<area shape="rect" title="Class to keep track of the simulation and also checks when all agents have left the simulation and up..." alt="" coords="7,83,113,111"/>
+<area shape="rect" title=" " alt="" coords="5,6,115,34"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a021af77802fa73e58439036d51c0e363"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a021af77802fa73e58439036d51c0e363">State</a> { <a class="el" href="class_game_manager.html#a021af77802fa73e58439036d51c0e363a960b44c579bc2f6818d2daaf9e4c16f0">Normal</a>
-, <a class="el" href="class_game_manager.html#a021af77802fa73e58439036d51c0e363a4d061a1fe7042375294c41430fa32822">Emergncy</a>
+, <a class="el" href="class_game_manager.html#a021af77802fa73e58439036d51c0e363a8cee44c8cd728172db4e146f4c317558">Evacuation</a>
+, <a class="el" href="class_game_manager.html#a021af77802fa73e58439036d51c0e363a6340b1b6854028c950311db35238f248">EvaComplete</a>
  }</td></tr>
+<tr class="memdesc:a021af77802fa73e58439036d51c0e363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum for the states of the simulation.  <a href="class_game_manager.html#a021af77802fa73e58439036d51c0e363">More...</a><br /></td></tr>
 <tr class="separator:a021af77802fa73e58439036d51c0e363"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a6283dddf80050b9f69a8046c2e1aa4c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a6283dddf80050b9f69a8046c2e1aa4c6">ChangeState</a> ()</td></tr>
+<tr class="memdesc:a6283dddf80050b9f69a8046c2e1aa4c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the current state from Normal to Evacuation.  <br /></td></tr>
 <tr class="separator:a6283dddf80050b9f69a8046c2e1aa4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac585cfc2a61185ee44948a51e90824ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#ac585cfc2a61185ee44948a51e90824ca">ChangeStateComplete</a> ()</td></tr>
+<tr class="memdesc:ac585cfc2a61185ee44948a51e90824ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Changes the current state from Evacuation to EvacuationComplete.  <br /></td></tr>
+<tr class="separator:ac585cfc2a61185ee44948a51e90824ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a9c4f3b3ae7468dbf34b180f69e38d7ca"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a9c4f3b3ae7468dbf34b180f69e38d7ca">AgentSpeedmin</a></td></tr>
+<tr class="separator:a9c4f3b3ae7468dbf34b180f69e38d7ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d10674ccc572bc38fefc98f01bd717"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#a09d10674ccc572bc38fefc98f01bd717">AgentSpeedmax</a></td></tr>
+<tr class="separator:a09d10674ccc572bc38fefc98f01bd717"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6020bbdc2843599f3e18178d9c1acab"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#ad6020bbdc2843599f3e18178d9c1acab">TimeforChangeState</a></td></tr>
+<tr class="separator:ad6020bbdc2843599f3e18178d9c1acab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7916853a5990bf781060a8d19d5839d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_game_manager.html#a021af77802fa73e58439036d51c0e363">State</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#ae7916853a5990bf781060a8d19d5839d">state</a></td></tr>
 <tr class="separator:ae7916853a5990bf781060a8d19d5839d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -141,7 +156,9 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:ab48fd2776c9b5ab2d05ecc21a97aacf0"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_manager.html#ab48fd2776c9b5ab2d05ecc21a97aacf0">totalAgents</a> = 0</td></tr>
 <tr class="separator:ab48fd2776c9b5ab2d05ecc21a97aacf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Enumeration Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class to keep track of the simulation and also checks when all agents have left the simulation and updatd the state. </p>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
 <a id="a021af77802fa73e58439036d51c0e363" name="a021af77802fa73e58439036d51c0e363"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a021af77802fa73e58439036d51c0e363">&#9670;&#160;</a></span>State</h2>
 
@@ -153,9 +170,12 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Enum for the states of the simulation. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a021af77802fa73e58439036d51c0e363a960b44c579bc2f6818d2daaf9e4c16f0" name="a021af77802fa73e58439036d51c0e363a960b44c579bc2f6818d2daaf9e4c16f0"></a>Normal&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a021af77802fa73e58439036d51c0e363a4d061a1fe7042375294c41430fa32822" name="a021af77802fa73e58439036d51c0e363a4d061a1fe7042375294c41430fa32822"></a>Emergncy&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a021af77802fa73e58439036d51c0e363a8cee44c8cd728172db4e146f4c317558" name="a021af77802fa73e58439036d51c0e363a8cee44c8cd728172db4e146f4c317558"></a>Evacuation&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a021af77802fa73e58439036d51c0e363a6340b1b6854028c950311db35238f248" name="a021af77802fa73e58439036d51c0e363a6340b1b6854028c950311db35238f248"></a>EvaComplete&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -176,11 +196,82 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="reference">References <a class="el" href="class_game_manager.html#ae7916853a5990bf781060a8d19d5839d">state</a>.</p>
+<p>Changes the current state from Normal to Evacuation. </p>
+
+<p class="reference">References <a class="el" href="class_u_i_control.html#a0187b31d447e4831403f9442f35a1820">UIControl.ChangeStateText()</a>, and <a class="el" href="class_game_manager.html#ae7916853a5990bf781060a8d19d5839d">state</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_manager_a6283dddf80050b9f69a8046c2e1aa4c6_cgraph.png" border="0" usemap="#aclass_game_manager_a6283dddf80050b9f69a8046c2e1aa4c6_cgraph" alt=""/></div>
+<map name="aclass_game_manager_a6283dddf80050b9f69a8046c2e1aa4c6_cgraph" id="aclass_game_manager_a6283dddf80050b9f69a8046c2e1aa4c6_cgraph">
+<area shape="rect" title="Changes the current state from Normal to Evacuation." alt="" coords="5,5,192,33"/>
+<area shape="rect" href="class_u_i_control.html#a0187b31d447e4831403f9442f35a1820" title="Changes the text of the current state based on the string passed." alt="" coords="240,5,419,33"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac585cfc2a61185ee44948a51e90824ca" name="ac585cfc2a61185ee44948a51e90824ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac585cfc2a61185ee44948a51e90824ca">&#9670;&#160;</a></span>ChangeStateComplete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameManager.ChangeStateComplete </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Changes the current state from Evacuation to EvacuationComplete. </p>
+
+<p class="reference">References <a class="el" href="class_u_i_control.html#a0187b31d447e4831403f9442f35a1820">UIControl.ChangeStateText()</a>, and <a class="el" href="class_game_manager.html#ae7916853a5990bf781060a8d19d5839d">state</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_game_manager_ac585cfc2a61185ee44948a51e90824ca_cgraph.png" border="0" usemap="#aclass_game_manager_ac585cfc2a61185ee44948a51e90824ca_cgraph" alt=""/></div>
+<map name="aclass_game_manager_ac585cfc2a61185ee44948a51e90824ca_cgraph" id="aclass_game_manager_ac585cfc2a61185ee44948a51e90824ca_cgraph">
+<area shape="rect" title="Changes the current state from Evacuation to EvacuationComplete." alt="" coords="7,5,247,33"/>
+<area shape="rect" href="class_u_i_control.html#a0187b31d447e4831403f9442f35a1820" title="Changes the text of the current state based on the string passed." alt="" coords="296,5,475,33"/>
+</map>
+</div>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a09d10674ccc572bc38fefc98f01bd717" name="a09d10674ccc572bc38fefc98f01bd717"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09d10674ccc572bc38fefc98f01bd717">&#9670;&#160;</a></span>AgentSpeedmax</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameManager.AgentSpeedmax</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum agent speed </p>
+
+</div>
+</div>
+<a id="a9c4f3b3ae7468dbf34b180f69e38d7ca" name="a9c4f3b3ae7468dbf34b180f69e38d7ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c4f3b3ae7468dbf34b180f69e38d7ca">&#9670;&#160;</a></span>AgentSpeedmin</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameManager.AgentSpeedmin</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Minimum agent speed </p>
+
+</div>
+</div>
 <a id="a31c8e9ae3fb57497988a361f0725e234" name="a31c8e9ae3fb57497988a361f0725e234"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a31c8e9ae3fb57497988a361f0725e234">&#9670;&#160;</a></span>MaxAgents</h2>
 
@@ -200,6 +291,7 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Total amount of agents allowed in the scene </p>
 
 </div>
 </div>
@@ -214,8 +306,24 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Current state of the simulation </p>
 
-<p class="reference">Referenced by <a class="el" href="class_game_manager.html#a6283dddf80050b9f69a8046c2e1aa4c6">ChangeState()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="class_game_manager.html#a6283dddf80050b9f69a8046c2e1aa4c6">ChangeState()</a>, and <a class="el" href="class_game_manager.html#ac585cfc2a61185ee44948a51e90824ca">ChangeStateComplete()</a>.</p>
+
+</div>
+</div>
+<a id="ad6020bbdc2843599f3e18178d9c1acab" name="ad6020bbdc2843599f3e18178d9c1acab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6020bbdc2843599f3e18178d9c1acab">&#9670;&#160;</a></span>TimeforChangeState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameManager.TimeforChangeState</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Amount of time to change state from Normal to Evacuation when simulation starts </p>
 
 </div>
 </div>
@@ -238,11 +346,12 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>Current number of agents in the scene </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li><a class="el" href="_game_manager_8cs.html">GameManager.cs</a></li>
+<li>BaxterSimulation/Assets/Scripts/<a class="el" href="_game_manager_8cs.html">GameManager.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
