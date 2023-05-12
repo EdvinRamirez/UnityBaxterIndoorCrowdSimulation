@@ -1,0 +1,4 @@
+<map id="GameManager.ChangeState" name="GameManager.ChangeState">
+<area shape="rect" id="node1" title="Changes the current state from Normal to Evacuation." alt="" coords="5,5,192,33"/>
+<area shape="rect" id="node3" href="$class_u_i_control.html#a0187b31d447e4831403f9442f35a1820" title="Changes the text of the current state based on the string passed." alt="" coords="240,5,419,33"/>
+</map>

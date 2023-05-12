@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['emergncy_0',['Emergncy',['../class_game_manager.html#a021af77802fa73e58439036d51c0e363a4d061a1fe7042375294c41430fa32822',1,'GameManager']]]
+  ['evacomplete_0',['EvaComplete',['../class_game_manager.html#a021af77802fa73e58439036d51c0e363a6340b1b6854028c950311db35238f248',1,'GameManager']]],
+  ['evacuation_1',['Evacuation',['../class_game_manager.html#a021af77802fa73e58439036d51c0e363a8cee44c8cd728172db4e146f4c317558',1,'GameManager']]]
 ];

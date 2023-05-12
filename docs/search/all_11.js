@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zoomsensitivity_0',['zoomSensitivity',['../class_full_movement_camera.html#aef87aea306f5c244bf7117d7fcf317d1',1,'FullMovementCamera']]]
+  ['uicontrol_0',['UIControl',['../class_u_i_control.html',1,'']]],
+  ['uicontrol_2ecs_1',['UIControl.cs',['../_u_i_control_8cs.html',1,'']]]
 ];

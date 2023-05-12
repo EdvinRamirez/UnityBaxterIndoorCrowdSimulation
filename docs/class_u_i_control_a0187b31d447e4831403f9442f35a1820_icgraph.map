@@ -1,0 +1,5 @@
+<map id="UIControl.ChangeStateText" name="UIControl.ChangeStateText">
+<area shape="rect" id="node1" title="Changes the text of the current state based on the string passed." alt="" coords="296,30,475,58"/>
+<area shape="rect" id="node3" href="$class_game_manager.html#a6283dddf80050b9f69a8046c2e1aa4c6" title="Changes the current state from Normal to Evacuation." alt="" coords="33,5,220,33"/>
+<area shape="rect" id="node5" href="$class_game_manager.html#ac585cfc2a61185ee44948a51e90824ca" title="Changes the current state from Evacuation to EvacuationComplete." alt="" coords="7,55,247,83"/>
+</map>
