@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['switchcamera_2ecs_0',['SwitchCamera.cs',['../_switch_camera_8cs.html',1,'']]]
+  ['player_2ecs_0',['Player.cs',['../_player_8cs.html',1,'']]],
+  ['playermanager_2ecs_1',['PlayerManager.cs',['../_player_manager_8cs.html',1,'']]],
+  ['playermovementinfo_2ecs_2',['PlayerMovementInfo.cs',['../_player_movement_info_8cs.html',1,'']]]
 ];

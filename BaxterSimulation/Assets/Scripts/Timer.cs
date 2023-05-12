@@ -3,13 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+/// <summary>
+/// Class to updated the timer and text
+/// </summary>
 public class Timer : MonoBehaviour
 {
+    /**
+     * Refrence of the text for the timer in scene
+     */
     public Text timer;
+
+    /**
+     * Refrence to the GameManager currently in the scence
+     */
     private GameManager gameManager;
 
-    private float timeToDestination;  // The amount of time it takes the NavMeshAgent to reach the destination
+    //Parameters for the timer 
+    private float timeToDestination;  
     private string timerText;
     private bool isdone;
     private bool isdone2;
@@ -24,7 +34,10 @@ public class Timer : MonoBehaviour
         isdone2 = false;
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update is called once per frame
+    /// Updated the timer each frame during the simulation 
+    /// </summary>
     void Update()
     {
         if (!isdone2)

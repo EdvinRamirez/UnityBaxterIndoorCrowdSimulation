@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['emergencyexitnorth_0',['emergencyExitNorth',['../class_exits_manager.html#a687bf5d51e241a1f46ce1046eda1ccb9',1,'ExitsManager']]],
-  ['emergencyexitsouth_1',['emergencyExitSouth',['../class_exits_manager.html#a10947cf11a8dc2280ccd8c46a1349683',1,'ExitsManager']]]
+  ['forwardandbackward_0',['forwardAndBackward',['../class_player_movement_info.html#a5d5c6987f668ffa171c086c975f9fee9',1,'PlayerMovementInfo']]],
+  ['freecamera_1',['FreeCamera',['../class_switch_camera.html#adc9193b01d2868d9b247d969842482ce',1,'SwitchCamera']]]
 ];

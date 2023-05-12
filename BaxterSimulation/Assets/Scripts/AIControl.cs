@@ -4,22 +4,50 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Linq;
 
+/// <summary>
+/// Class for control the agents and to guide them to their destination/exit
+/// </summary>
 public class AIControl : MonoBehaviour
 {
+    /**
+     * Reference of the ExitsManager in the scene
+     */
     private ExitsManager exitsManager;
+    
+    /**
+     * Refrence of the GameManager in the scene
+     */
     private GameManager gameManager;
 
+    /**
+     * Refrence to the NavMeshAgent 
+     */
     private NavMeshAgent agent;
 
+    /**
+     * A collection of the paths which the agent will take
+     */
     private NavMeshPath[] allPaths;
+
+    /**
+     * All the target points for which the agent will passed through 
+     */
     private Vector3[] allTargets;
 
+    /**
+     * Checks if the agent is leaving or not
+     */
     private bool isLeaving;
-
+    
+    /**
+     * The speed of the agent
+     */
     private float speed;
 
-
-
+    /// <summary>
+    /// Start is called before the first frame update
+    /// Also starts getting reference from the scence and also setting agent speed
+    /// </summary>
     void Start()
     {
         GameManager.totalAgents++;
@@ -35,10 +63,15 @@ public class AIControl : MonoBehaviour
         Invoke(nameof(CalculatePath), 2f);
         //CalculatePath();
 
-        StartCoroutine(MyCoroutine());
+        StartCoroutine(StartAgentPath());
     }
     
-    IEnumerator MyCoroutine()
+    /// <summary>
+    /// Coroutine which will run infintily until the agent has reach it's destination
+    /// Will run through the paths in the collection of paths until last one
+    /// </summary>
+    /// <returns>Doesn't return as agent will be destroyed at the end</returns>
+    IEnumerator StartAgentPath()
     {
         int counter = 0;
 
@@ -72,6 +105,10 @@ public class AIControl : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    /// <summary>
+    /// Calculates the path for which the agent will take and also calculates all paths in advance 
+    /// for the agent 
+    /// </summary>
     private void CalculatePath()
     {
         Vector3 myPosition = this.transform.position;
