@@ -29,6 +29,9 @@ public class AgentSpawnArea : MonoBehaviour
      */
     public GameObject agent;
 
+    /**
+     * The floor level the agent is on
+     */
     public int FloorLevel;
 
 

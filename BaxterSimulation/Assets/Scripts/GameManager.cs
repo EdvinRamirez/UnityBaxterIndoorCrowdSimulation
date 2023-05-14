@@ -44,8 +44,14 @@ public class GameManager : MonoBehaviour
      */
     private UIControl uicontrol;
 
+    /**
+     * For when the agents start calculating their path after the simulation starts
+     */
     public float TimeCalculatePath;
 
+    /**
+     * A buffer for the agents stopping distance
+     */
     public float BufferDistanceAgent;
 
 

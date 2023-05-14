@@ -14,9 +14,9 @@ public class ExitsManager : MonoBehaviour
     public static ExitsManager _instance;
 
     /**
-     * Reference to every AgentPath in the scence
+     * Dictionary to store all the paths based on floor level
      */
-    private Dictionary<int, GameObject[]> PathCollections2;
+    private Dictionary<int, GameObject[]> PathCollections;
 
 
     /// <summary>
@@ -35,12 +35,12 @@ public class ExitsManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        PathCollections2 = new Dictionary<int, GameObject[]>();
+        PathCollections = new Dictionary<int, GameObject[]>();
 
-        PathCollections2.Add(1, GameObject.FindGameObjectsWithTag("PathFirstFloor"));
-        PathCollections2.Add(2, GameObject.FindGameObjectsWithTag("PathSecondFloor"));
-        PathCollections2.Add(3, GameObject.FindGameObjectsWithTag("PathThirdFloor"));
-        PathCollections2.Add(4, GameObject.FindGameObjectsWithTag("PathFourthFloor"));
+        PathCollections.Add(1, GameObject.FindGameObjectsWithTag("PathFirstFloor"));
+        PathCollections.Add(2, GameObject.FindGameObjectsWithTag("PathSecondFloor"));
+        PathCollections.Add(3, GameObject.FindGameObjectsWithTag("PathThirdFloor"));
+        PathCollections.Add(4, GameObject.FindGameObjectsWithTag("PathFourthFloor"));
 
 
         
@@ -55,11 +55,13 @@ public class ExitsManager : MonoBehaviour
 
     private void PrintEverything()
     {
-        Debug.Log(PathCollections2[1].Length);
-        Debug.Log(PathCollections2[2].Length);
-        Debug.Log(PathCollections2[3].Length);
-        Debug.Log(PathCollections2[4].Length);
+        Debug.Log(PathCollections[1].Length);
+        Debug.Log(PathCollections[2].Length);
+        Debug.Log(PathCollections[3].Length);
+        Debug.Log(PathCollections[4].Length);
     }
+
+    /*
 
     /// <summary>
     /// Returns the array with all the reference of the paths avaiable in the scence
@@ -69,20 +71,22 @@ public class ExitsManager : MonoBehaviour
     {
         //return pathCollection;
         return null;
-    }
+    }*/
 
     /// <summary>
+    ///     
     /// Calculates the the ideal path for the given agent's position based on the first point in the path 
-    /// and chooses the closet path 
-    /// </summary>
+    /// and chooses the closet path and also consider which floor the agent is on
+    /// 
     /// <param name="currentPosition">The current position of the agent</param>
+    /// <param name="FloorLevel">The floor level the agent is one to look for agent on said floor</param>
     /// <returns>Returns the ideal path for the agent</returns>
     public Vector3[] GetAgentPath(Vector3 currentPosition, int FloorLevel)
     {
         
         Vector3[] AgentPath;
 
-        GameObject[] temp = PathCollections2[FloorLevel];
+        GameObject[] temp = PathCollections[FloorLevel];
         
         int indexRetrun = 0;
         float closestPoint = float.MaxValue;

@@ -10445,7 +10445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2575677941882930951, guid: 89a4cd32453241142ac32c356ad5c6e5, type: 3}
       propertyPath: TimeCalculatePath
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2575677941882930951, guid: 89a4cd32453241142ac32c356ad5c6e5, type: 3}
       propertyPath: TimeforChangeState

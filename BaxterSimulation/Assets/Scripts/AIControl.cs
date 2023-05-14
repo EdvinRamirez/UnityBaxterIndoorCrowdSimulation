@@ -44,6 +44,9 @@ public class AIControl : MonoBehaviour
      */
     private float speed;
 
+    /**
+     * The florr level which the agent is on
+     */
     public int FloorLevel;
 
     /// <summary>
@@ -133,6 +136,11 @@ public class AIControl : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    /// Returns the floor level the agent is on
+    /// </summary>
+    /// <returns>Int FloorLevel</returns>
     public int getFloorLevel()
     {
         return FloorLevel;
