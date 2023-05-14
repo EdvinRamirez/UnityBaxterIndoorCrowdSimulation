@@ -264,6 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AgentSpeedmin: 1
   AgentSpeedmax: 2
+  TimeforChangeState: 10
   state: 0
 --- !u!4 &82351089
 Transform:
@@ -1529,6 +1530,7 @@ MonoBehaviour:
   size: {x: 45, y: 1, z: 50}
   AgentCount: 20
   agent: {fileID: 7060160717903920238, guid: 8e90e0daaf2b766458b12ea1b56b25e9, type: 3}
+  FloorLevel: 0
 --- !u!1 &442827787
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,6 +1798,7 @@ MonoBehaviour:
   size: {x: 130, y: 1, z: 20}
   AgentCount: 50
   agent: {fileID: 7060160717903920238, guid: 8e90e0daaf2b766458b12ea1b56b25e9, type: 3}
+  FloorLevel: 4
 --- !u!1 &514046485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1843,6 +1846,7 @@ MonoBehaviour:
   size: {x: 45, y: 1, z: 50}
   AgentCount: 20
   agent: {fileID: 7060160717903920238, guid: 8e90e0daaf2b766458b12ea1b56b25e9, type: 3}
+  FloorLevel: 0
 --- !u!1 &543270255
 GameObject:
   m_ObjectHideFlags: 0
@@ -2578,7 +2582,7 @@ GameObject:
   - component: {fileID: 629107631}
   m_Layer: 0
   m_Name: PathLeft - 2
-  m_TagString: Path
+  m_TagString: PathFourthFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2616,8 +2620,6 @@ MonoBehaviour:
   allPoints:
   - {fileID: 263254249}
   - {fileID: 1022502653}
-  Cordinates:
-  - {x: -130.7, y: -4.29, z: -74.21}
 --- !u!1 &645975500
 GameObject:
   m_ObjectHideFlags: 0
@@ -2938,7 +2940,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Agent: {fileID: 7060160717903920238, guid: 8e90e0daaf2b766458b12ea1b56b25e9, type: 3}
-  minAgents: 0
   maxAgents: 54
   moveX: 1.1
   moveZ: 0
@@ -2976,6 +2977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23424bf68f20a844a8e8ce283a91917e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FloorLevel: 0
 --- !u!136 &740606642
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3316,7 +3318,7 @@ GameObject:
   - component: {fileID: 812572977}
   m_Layer: 0
   m_Name: PathRight - 2
-  m_TagString: Path
+  m_TagString: PathFourthFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3336,7 +3338,7 @@ Transform:
   - {fileID: 788148769}
   - {fileID: 2097154971}
   m_Father: {fileID: 1145612460}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &812572977
 MonoBehaviour:
@@ -3354,7 +3356,6 @@ MonoBehaviour:
   - {fileID: 2070605362}
   - {fileID: 788148769}
   - {fileID: 2097154971}
-  Cordinates: []
 --- !u!1 &849229960
 GameObject:
   m_ObjectHideFlags: 0
@@ -4843,7 +4844,7 @@ GameObject:
   - component: {fileID: 1198977513}
   m_Layer: 0
   m_Name: PathRight - 1
-  m_TagString: Path
+  m_TagString: PathFourthFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4863,7 +4864,7 @@ Transform:
   - {fileID: 1092430200}
   - {fileID: 442827788}
   m_Father: {fileID: 1145612460}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1198977513
 MonoBehaviour:
@@ -4881,8 +4882,6 @@ MonoBehaviour:
   - {fileID: 1727425366}
   - {fileID: 1092430200}
   - {fileID: 442827788}
-  Cordinates:
-  - {x: -130.7, y: -4.29, z: -74.21}
 --- !u!1 &1219755002
 GameObject:
   m_ObjectHideFlags: 0
@@ -6776,7 +6775,7 @@ GameObject:
   - component: {fileID: 1899169994}
   m_Layer: 0
   m_Name: PathLeft - 1
-  m_TagString: Path
+  m_TagString: PathFourthFloor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6814,8 +6813,6 @@ MonoBehaviour:
   allPoints:
   - {fileID: 1783346813}
   - {fileID: 1572818265}
-  Cordinates:
-  - {x: -130.7, y: -4.29, z: -74.21}
 --- !u!1 &1899346168
 GameObject:
   m_ObjectHideFlags: 0

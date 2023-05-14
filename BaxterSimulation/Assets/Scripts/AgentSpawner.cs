@@ -11,6 +11,8 @@ public class AgentSpawner : MonoBehaviour
     //private Transform transform;
     public GameObject Agent;
 
+    private AIControl aicontrol;
+
     /**
      * Maximum amout of agents to spawn
      */
@@ -47,9 +49,13 @@ public class AgentSpawner : MonoBehaviour
      */
     private float z;
 
+    private int FloorlevelForAgent;
+
     // Start is called before the first frame update
     void Start()
     {
+        aicontrol = GetComponent<AIControl>();
+        FloorlevelForAgent = aicontrol.getFloorLevel();
         //Get position of the curent game agent 
         x = transform.position.x;
         y = transform.position.y;
@@ -69,7 +75,8 @@ public class AgentSpawner : MonoBehaviour
             y += moveY;
             z += moveZ;
             nextPosition = new Vector3(x, y, z);
-            Instantiate(Agent, nextPosition, Quaternion.identity); 
+            Instantiate(Agent, nextPosition, Quaternion.identity);
+            Agent.GetComponent<AIControl>().FloorLevel = FloorlevelForAgent;
         }
     }
 }

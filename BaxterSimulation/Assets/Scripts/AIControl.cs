@@ -44,6 +44,8 @@ public class AIControl : MonoBehaviour
      */
     private float speed;
 
+    public int FloorLevel;
+
     /// <summary>
     /// Start is called before the first frame update
     /// Also starts getting reference from the scence and also setting agent speed
@@ -60,12 +62,12 @@ public class AIControl : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
 
-        Invoke(nameof(CalculatePath), 2f);
+        Invoke(nameof(CalculatePath), gameManager.TimeCalculatePath);
         //CalculatePath();
 
         StartCoroutine(StartAgentPath());
     }
-    
+
     /// <summary>
     /// Coroutine which will run infintily until the agent has reach it's destination
     /// Will run through the paths in the collection of paths until last one
@@ -87,7 +89,7 @@ public class AIControl : MonoBehaviour
             {
 
                 float distance = Vector3.Distance(transform.position, allTargets[counter - 1]);
-                if (distance <= agent.stoppingDistance + 1)
+                if (distance <= agent.stoppingDistance + gameManager.BufferDistanceAgent)
                 {
                     if (counter >= allTargets.Length)
                     {
@@ -100,7 +102,7 @@ public class AIControl : MonoBehaviour
             yield return null;
         }
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(2f);
 
         Destroy(this.gameObject);
     }
@@ -112,7 +114,7 @@ public class AIControl : MonoBehaviour
     private void CalculatePath()
     {
         Vector3 myPosition = this.transform.position;
-        allTargets = exitsManager.GetAgentPath(myPosition);
+        allTargets = exitsManager.GetAgentPath(myPosition, FloorLevel);
         allPaths = new NavMeshPath[allTargets.Length];
 
         NavMeshPath firstPath = new NavMeshPath();
@@ -129,5 +131,10 @@ public class AIControl : MonoBehaviour
 
             allPaths[i + 1] = path;
         }
+    }
+
+    public int getFloorLevel()
+    {
+        return FloorLevel;
     }
 }

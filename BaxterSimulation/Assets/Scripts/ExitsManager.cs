@@ -16,12 +16,8 @@ public class ExitsManager : MonoBehaviour
     /**
      * Reference to every AgentPath in the scence
      */
-    private GameObject[] pathCollection;
+    private Dictionary<int, GameObject[]> PathCollections2;
 
-    /**
-     * Amount of the paths avaiable to the agents
-     */
-    private int size;
 
     /// <summary>
     /// Awake which first starts to created an instance of the object itself and delete and duplicates
@@ -39,14 +35,30 @@ public class ExitsManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-        pathCollection = GameObject.FindGameObjectsWithTag("Path");
+        PathCollections2 = new Dictionary<int, GameObject[]>();
+
+        PathCollections2.Add(1, GameObject.FindGameObjectsWithTag("PathFirstFloor"));
+        PathCollections2.Add(2, GameObject.FindGameObjectsWithTag("PathSecondFloor"));
+        PathCollections2.Add(3, GameObject.FindGameObjectsWithTag("PathThirdFloor"));
+        PathCollections2.Add(4, GameObject.FindGameObjectsWithTag("PathFourthFloor"));
+
+
+        
     }
     /// <summary>
     /// Start is called before the first frame update
     /// </summary>
     void Start()
     {
-        size = pathCollection.Length;
+        Invoke(nameof(PrintEverything), 2);
+    }
+
+    private void PrintEverything()
+    {
+        Debug.Log(PathCollections2[1].Length);
+        Debug.Log(PathCollections2[2].Length);
+        Debug.Log(PathCollections2[3].Length);
+        Debug.Log(PathCollections2[4].Length);
     }
 
     /// <summary>
@@ -55,7 +67,8 @@ public class ExitsManager : MonoBehaviour
     /// <returns>Array of gameobject of type AgentPath</returns>
     public GameObject[] getPathCollections()
     {
-        return pathCollection;
+        //return pathCollection;
+        return null;
     }
 
     /// <summary>
@@ -64,16 +77,19 @@ public class ExitsManager : MonoBehaviour
     /// </summary>
     /// <param name="currentPosition">The current position of the agent</param>
     /// <returns>Returns the ideal path for the agent</returns>
-    public Vector3[] GetAgentPath(Vector3 currentPosition)
+    public Vector3[] GetAgentPath(Vector3 currentPosition, int FloorLevel)
     {
+        
         Vector3[] AgentPath;
 
+        GameObject[] temp = PathCollections2[FloorLevel];
+        
         int indexRetrun = 0;
         float closestPoint = float.MaxValue;
-
-        for (int i = 0; i < size; i++)
+        
+        for (int i = 0; i < temp.Length; i++)
         {
-            AgentPath path = pathCollection[i].GetComponent<AgentPath>();
+            AgentPath path = temp[i].GetComponent<AgentPath>();
             Vector3 position = path.StartPosition();
 
             float distance = Vector3.Distance(position, currentPosition);
@@ -84,8 +100,9 @@ public class ExitsManager : MonoBehaviour
                 indexRetrun = i;
             }
         }
-        AgentPath = pathCollection[indexRetrun].GetComponent<AgentPath>().getPath();
+        AgentPath = temp[indexRetrun].GetComponent<AgentPath>().getPath();
 
         return AgentPath;
+        
     }
 }

@@ -26,7 +26,6 @@ public class SwitchCamera : MonoBehaviour
      * Refrenace to the UIControl to change camera text when switching cameras
      */
     private UIControl uicontrol;
-    private AudioListener audio;
 
     /// <summary>
     /// Start is called before the first frame update

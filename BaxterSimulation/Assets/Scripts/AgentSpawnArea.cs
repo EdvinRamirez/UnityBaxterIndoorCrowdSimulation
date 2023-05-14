@@ -29,6 +29,8 @@ public class AgentSpawnArea : MonoBehaviour
      */
     public GameObject agent;
 
+    public int FloorLevel;
+
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +51,7 @@ public class AgentSpawnArea : MonoBehaviour
             Vector3 pos = center + new Vector3(x, 1, z);
 
             Instantiate(agent, pos, Quaternion.identity);
+            agent.GetComponent<AIControl>().FloorLevel = FloorLevel;
         }
     }
 

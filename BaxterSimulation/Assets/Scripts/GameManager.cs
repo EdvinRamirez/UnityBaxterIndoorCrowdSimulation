@@ -44,6 +44,10 @@ public class GameManager : MonoBehaviour
      */
     private UIControl uicontrol;
 
+    public float TimeCalculatePath;
+
+    public float BufferDistanceAgent;
+
 
     /// <summary>
     /// Enum for the states of the simulation
