@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['maxagents_0',['maxAgents',['../class_agent_spawner.html#af83002573501defa5ce0099d125779f6',1,'AgentSpawner']]],
-  ['maxagents_1',['MaxAgents',['../class_game_manager.html#a31c8e9ae3fb57497988a361f0725e234',1,'GameManager']]],
+  ['maxagents_0',['MaxAgents',['../class_game_manager.html#a31c8e9ae3fb57497988a361f0725e234',1,'GameManager']]],
+  ['maxagents_1',['maxAgents',['../class_agent_spawner.html#af83002573501defa5ce0099d125779f6',1,'AgentSpawner']]],
   ['menumanager_2',['MenuManager',['../class_menu_manager.html',1,'']]],
   ['menumanager_2ecs_3',['MenuManager.cs',['../_menu_manager_8cs.html',1,'']]],
   ['movespeed_4',['moveSpeed',['../class_camera_movement.html#a8a526b1cc50dd50efab2bf6ad4cf61df',1,'CameraMovement']]],

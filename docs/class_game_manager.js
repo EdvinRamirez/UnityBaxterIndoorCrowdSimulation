@@ -9,6 +9,8 @@ var class_game_manager =
     [ "ChangeStateComplete", "class_game_manager.html#ac585cfc2a61185ee44948a51e90824ca", null ],
     [ "AgentSpeedmax", "class_game_manager.html#a09d10674ccc572bc38fefc98f01bd717", null ],
     [ "AgentSpeedmin", "class_game_manager.html#a9c4f3b3ae7468dbf34b180f69e38d7ca", null ],
+    [ "BufferDistanceAgent", "class_game_manager.html#aa3cc2b5cc4828465de0af7c4fa14372b", null ],
     [ "state", "class_game_manager.html#ae7916853a5990bf781060a8d19d5839d", null ],
+    [ "TimeCalculatePath", "class_game_manager.html#adb09b0e59c86f4336cd4818de8deff20", null ],
     [ "TimeforChangeState", "class_game_manager.html#ad6020bbdc2843599f3e18178d9c1acab", null ]
 ];

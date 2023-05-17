@@ -3,7 +3,7 @@ var annotated_dup =
     [ "AgentPath", "class_agent_path.html", "class_agent_path" ],
     [ "AgentSpawnArea", "class_agent_spawn_area.html", "class_agent_spawn_area" ],
     [ "AgentSpawner", "class_agent_spawner.html", "class_agent_spawner" ],
-    [ "AIControl", "class_a_i_control.html", null ],
+    [ "AIControl", "class_a_i_control.html", "class_a_i_control" ],
     [ "CameraControls", "class_camera_controls.html", null ],
     [ "CameraMovement", "class_camera_movement.html", "class_camera_movement" ],
     [ "EnemyControllor", "class_enemy_controllor.html", "class_enemy_controllor" ],

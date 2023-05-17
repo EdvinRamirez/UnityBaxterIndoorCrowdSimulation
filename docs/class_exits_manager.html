@@ -120,12 +120,9 @@ Collaboration diagram for ExitsManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a98031f5dee07064d9cebaf87a441f67d"><td class="memItemLeft" align="right" valign="top">GameObject[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exits_manager.html#a98031f5dee07064d9cebaf87a441f67d">getPathCollections</a> ()</td></tr>
-<tr class="memdesc:a98031f5dee07064d9cebaf87a441f67d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the array with all the reference of the paths avaiable in the scence.  <br /></td></tr>
-<tr class="separator:a98031f5dee07064d9cebaf87a441f67d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a655090145067566b161040f9092297e4"><td class="memItemLeft" align="right" valign="top">Vector3[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exits_manager.html#a655090145067566b161040f9092297e4">GetAgentPath</a> (Vector3 currentPosition)</td></tr>
-<tr class="memdesc:a655090145067566b161040f9092297e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the the ideal path for the given agent's position based on the first point in the path and chooses the closet path.  <br /></td></tr>
-<tr class="separator:a655090145067566b161040f9092297e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a421ae1c2565be3d8562fae2e9afcf303"><td class="memItemLeft" align="right" valign="top">Vector3[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_exits_manager.html#a421ae1c2565be3d8562fae2e9afcf303">GetAgentPath</a> (Vector3 currentPosition, int FloorLevel)</td></tr>
+<tr class="memdesc:a421ae1c2565be3d8562fae2e9afcf303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the the ideal path for the given agent's position based on the first point in the path and chooses the closet path and also consider which floor the agent is on.  <br /></td></tr>
+<tr class="separator:a421ae1c2565be3d8562fae2e9afcf303"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -135,8 +132,8 @@ Static Public Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class to keep track of the paths for the agents to use. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a655090145067566b161040f9092297e4" name="a655090145067566b161040f9092297e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a655090145067566b161040f9092297e4">&#9670;&#160;</a></span>GetAgentPath()</h2>
+<a id="a421ae1c2565be3d8562fae2e9afcf303" name="a421ae1c2565be3d8562fae2e9afcf303"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a421ae1c2565be3d8562fae2e9afcf303">&#9670;&#160;</a></span>GetAgentPath()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,16 +142,27 @@ Static Public Attributes</h2></td></tr>
           <td class="memname">Vector3[] ExitsManager.GetAgentPath </td>
           <td>(</td>
           <td class="paramtype">Vector3&#160;</td>
-          <td class="paramname"><em>currentPosition</em></td><td>)</td>
+          <td class="paramname"><em>currentPosition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>FloorLevel</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the the ideal path for the given agent's position based on the first point in the path and chooses the closet path. </p>
+<p>Calculates the the ideal path for the given agent's position based on the first point in the path and chooses the closet path and also consider which floor the agent is on. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">currentPosition</td><td>The current position of the agent</td></tr>
+    <tr><td class="paramname">FloorLevel</td><td>The floor level the agent is one to look for agent on said floor</td></tr>
   </table>
   </dd>
 </dl>
@@ -164,32 +172,12 @@ Static Public Attributes</h2></td></tr>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_exits_manager_a655090145067566b161040f9092297e4_cgraph.png" border="0" usemap="#aclass_exits_manager_a655090145067566b161040f9092297e4_cgraph" alt=""/></div>
-<map name="aclass_exits_manager_a655090145067566b161040f9092297e4_cgraph" id="aclass_exits_manager_a655090145067566b161040f9092297e4_cgraph">
+<div class="center"><img src="class_exits_manager_a421ae1c2565be3d8562fae2e9afcf303_cgraph.png" border="0" usemap="#aclass_exits_manager_a421ae1c2565be3d8562fae2e9afcf303_cgraph" alt=""/></div>
+<map name="aclass_exits_manager_a421ae1c2565be3d8562fae2e9afcf303_cgraph" id="aclass_exits_manager_a421ae1c2565be3d8562fae2e9afcf303_cgraph">
 <area shape="rect" title="Calculates the the ideal path for the given agent&#39;s position based on the first point in the path and..." alt="" coords="7,5,193,33"/>
 <area shape="rect" href="class_agent_path.html#a464756bd7785bc27138ce279822aedb4" title="Returns the starting position of a path as a Vector3." alt="" coords="243,5,405,33"/>
 </map>
 </div>
-
-</div>
-</div>
-<a id="a98031f5dee07064d9cebaf87a441f67d" name="a98031f5dee07064d9cebaf87a441f67d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98031f5dee07064d9cebaf87a441f67d">&#9670;&#160;</a></span>getPathCollections()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">GameObject[] ExitsManager.getPathCollections </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the array with all the reference of the paths avaiable in the scence. </p>
-<dl class="section return"><dt>Returns</dt><dd>Array of gameobject of type <a class="el" href="class_agent_path.html" title="Class will hold an collection of Transform/Vector3 for the points to act as the path for agents.">AgentPath</a></dd></dl>
 
 </div>
 </div>
