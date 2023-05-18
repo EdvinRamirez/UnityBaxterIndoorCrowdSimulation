@@ -14,7 +14,6 @@ Implementation Strategy: Currently the project is set to build using the Unity g
 using C# as the main programming language. We also plan on using Blender for the majority of 
 assets while building a copy of Baxter Arena. 
 
-
 The Project is using Unity version 2020.3.40f1 
 The main Project is located in BaxterSimulation Folder for Unity
 
@@ -27,8 +26,8 @@ The scene to add are in order
 - EdvinSecondLevelTesting
 - HideThirdLevel
 - FourthFloor 
-- Make sure to select PC, Mac & Linux Standalone Platform
-- Press Build and Run and select Folder of your choosing 
+Make sure to select PC, Mac & Linux Standalone Platform
+Press Build and Run and select Folder of your choosing 
 After which, Unity build the project and should launch when done
 
 
