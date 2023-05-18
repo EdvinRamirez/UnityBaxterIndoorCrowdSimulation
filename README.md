@@ -25,7 +25,8 @@ The scene to add are in order
 - FirstFloorEdited
 - EdvinSecondLevelTesting
 - HideThirdLevel
-- FourthFloor 
+- FourthFloor
+
 Make sure to select PC, Mac & Linux Standalone Platform
 Press Build and Run and select Folder of your choosing 
 After which, Unity build the project and should launch when done
