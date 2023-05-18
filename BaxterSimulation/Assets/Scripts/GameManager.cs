@@ -111,6 +111,12 @@ public class GameManager : MonoBehaviour
             Invoke(nameof(ChangeStateComplete), 2f);
             //Application.Quit();
         }
+
+        if(Input.GetKeyDown((KeyCode)'p'))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            SceneManager.LoadScene(0);
+        }
     }
 
     /// <summary>
@@ -129,6 +135,8 @@ public class GameManager : MonoBehaviour
     {
         state = State.EvaComplete;
         uicontrol.ChangeStateText(State.EvaComplete.ToString());
-        UnityEditor.EditorApplication.isPlaying = false;
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene(0);
+        //UnityEditor.EditorApplication.isPlaying = false;
     }
 }

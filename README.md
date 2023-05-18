@@ -14,6 +14,24 @@ Implementation Strategy: Currently the project is set to build using the Unity g
 using C# as the main programming language. We also plan on using Blender for the majority of 
 assets while building a copy of Baxter Arena. 
 
+
+The Project is using Unity version 2020.3.40f1 
+The main Project is located in BaxterSimulation Folder for Unity
+
+For a build of the Project 
+File -> Build Settings 
+The scene to add are in order
+- JasonMainMenu
+- AllLevelsCombinedSene
+- FirstFloorEdited
+- EdvinSecondLevelTesting
+- HideThirdLevel
+- FourthFloor 
+- Make sure to select PC, Mac & Linux Standalone Platform
+- Press Build and Run and select Folder of your choosing 
+After which, Unity build the project and should launch when done
+
+
 *CODE MILESTONE 3 RELASE NOTES*
 - Game Manager script implemented
 - Updated AI Control Script to improve Agent functionality. 
@@ -23,3 +41,5 @@ assets while building a copy of Baxter Arena.
 - First and Second Floor navmesh agents added 
 - Main menu added 
 - Next steps are to finish 3rd and 4th floor walls, optimize nav mesh agents, finish main menu functionality. 
+
+
